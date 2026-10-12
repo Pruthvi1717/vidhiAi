@@ -1,0 +1,230 @@
+:root {
+  --saffron: #e8730c;
+  --maroon: #6b1d1d;
+  --gold: #c9a227;
+  --cream: #fff8ec;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 40px;
+  background: var(--maroon);
+  border-bottom: 3px solid var(--gold);
+  z-index: 10;
+}
+.logo {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--gold);
+  text-decoration: none;
+}
+.nav-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+}
+.nav-links a {
+  color: var(--cream);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+.nav-links a:hover {
+  color: var(--gold);
+}
+
+/* Hero */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 100px 20px 40px;
+  background: linear-gradient(180deg, #fff1d6 0%, var(--cream) 100%);
+}
+.om {
+  font-family: "Noto Sans Devanagari", sans-serif;
+  font-size: 5rem;
+  color: var(--saffron);
+}
+.hero h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 4rem;
+  color: var(--maroon);
+}
+.shloka {
+  font-family: "Noto Sans Devanagari", sans-serif;
+  color: var(--gold);
+  font-size: 1.4rem;
+  margin: 8px 0 16px;
+}
+.subtitle {
+  max-width: 560px;
+  margin-bottom: 28px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 12px 32px;
+  background: var(--saffron);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  border: 2px solid var(--maroon);
+  font-weight: 500;
+}
+.btn:hover {
+  background: var(--maroon);
+}
+.btn-light {
+  margin-top: 36px;
+  background: var(--gold);
+  color: var(--maroon);
+  border-color: var(--gold);
+}
+
+/* Sections */
+.section {
+  min-height: 100vh;
+  padding: 100px 40px 60px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.section-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.6rem;
+  color: var(--maroon);
+}
+.divider {
+  color: var(--gold);
+  font-size: 1.4rem;
+  margin: 8px 0 36px;
+}
+
+/* Feature cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 24px;
+  max-width: 1000px;
+  width: 100%;
+}
+.card {
+  background: white;
+  padding: 28px 20px;
+  border: 1px solid var(--gold);
+  border-top: 4px solid var(--saffron);
+  border-radius: 6px;
+}
+.card-icon {
+  font-size: 2.2rem;
+}
+.card h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.5rem;
+  color: var(--maroon);
+  margin: 8px 0;
+}
+
+/* How it works */
+.section-dark {
+  background: var(--maroon);
+}
+.section-dark .section-title {
+  color: var(--gold);
+}
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 900px;
+  width: 100%;
+}
+.step {
+  color: var(--cream);
+}
+.step-no {
+  font-family: "Noto Sans Devanagari", sans-serif;
+  font-size: 2.6rem;
+  color: var(--gold);
+}
+.step h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.6rem;
+}
+
+/* Footer */
+.footer {
+  background: #3b1f12;
+  color: var(--cream);
+  text-align: center;
+  padding: 40px 20px;
+}
+.om-small {
+  font-family: "Noto Sans Devanagari", sans-serif;
+  font-size: 2rem;
+  color: var(--gold);
+}
+.footer-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.5rem;
+  color: var(--gold);
+}
+.footer p {
+  max-width: 600px;
+  margin: 6px auto;
+  font-size: 0.9rem;
+}
+.copy {
+  opacity: 0.7;
+  margin-top: 16px;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .navbar { padding: 12px 16px; }
+  .nav-links { display: none; }
+  .hero h1 { font-size: 3rem; }
+}
+.hero {
+  /* ...keep everything you already have... */
+  position: relative;
+  overflow: hidden;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.hero-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 45% 40% at center,
+    rgba(255, 248, 236, 0.85) 0%,
+    rgba(255, 248, 236, 0) 100%
+  );
+}
