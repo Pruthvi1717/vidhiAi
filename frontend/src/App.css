@@ -228,3 +228,83 @@
     rgba(255, 248, 236, 0) 100%
   );
 }
+/* Navbar Pro button */
+.nav-links a.nav-pro {
+  background: var(--gold);
+  color: var(--maroon);
+  padding: 6px 18px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+.nav-links a.nav-pro:hover {
+  background: var(--cream);
+  color: var(--maroon);
+}
+
+/* Pricing */
+.plans {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+  max-width: 760px;
+  width: 100%;
+}
+.plan {
+  position: relative;
+  background: white;
+  padding: 36px 24px;
+  border: 1px solid var(--gold);
+  border-radius: 6px;
+}
+.plan-pro {
+  border: 3px solid var(--maroon);
+  box-shadow: 0 8px 24px rgba(107, 29, 29, 0.2);
+}
+.plan-badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--maroon);
+  color: var(--gold);
+  font-size: 0.75rem;
+  padding: 4px 14px;
+  border-radius: 20px;
+}
+.plan h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.8rem;
+  color: var(--maroon);
+}
+.plan-price {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: var(--saffron);
+}
+.plan-price span {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  color: #3b1f12;
+}
+.plan ul {
+  list-style: none;
+  margin: 20px 0 28px;
+  text-align: left;
+}
+.plan li {
+  padding: 8px 0;
+  border-bottom: 1px dashed var(--gold);
+  font-size: 0.95rem;
+}
+.plan li::before {
+  content: "✦ ";
+  color: var(--gold);
+}
+.btn-outline {
+  background: transparent;
+  color: var(--maroon);
+}
+.btn-outline:hover {
+  color: white;
+}
